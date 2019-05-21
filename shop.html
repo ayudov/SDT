@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <title>Andrey Yudov</title>
+
+  <meta property="og:title" content="Andrey Yudov. Info and references.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://t.me/AndreyYudov">
+  <meta property="og:image" content="/img/pic.jpg">
+
+  <meta name="description" content="Andrey Yudov. Short info and references.">
+  <meta name="keywords" content="Andrey, Yudov, Андрей, Юдов, Андрій, python, C, C++, Arduino, Qt, developer, разработчик, розробник, програміст, программист, Андрей Николаевич Юдов">
+  <meta name="author" content="Andrey Yudov">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+	<div class="row py-2">
+		<div class="col-md-4 col-lg-3 col-xl-2 border bg-light">
+			<h4 class="p-1">Фильтры:</h4>
+			<div id = "myTools">
+			</div>
+			<h4>Корзина:</h4>
+			<p id="myBasket">В даннвй момент в корзина пустая</p>
+		</div>
+		<div class="col-md-8 col-lg-9 col-xl-10 border">
+			<h4 class="text-center p-1">Каталог товаров:</h4>
+			<div class="container">
+				<div class="row" id = "rowts">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title  m-1" id="exampleModalLabel">Купить этот товар?</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden = "true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<form>
+						<label for="inputquantity">Сколько нужно?</label>
+						<input type="text" class="form-control" id="inputquantity" placeholder="Целые числа" value="1">
+						<small id="modlalMessag" class="form-text text-muted"></small>
+						<button type="button" id="modlalBtn" class="btn btn-primary my-3" value="1" onclick=myByBtn(this.value)>Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="ts/script.js">
+</script>
+</body>
+
+</html>
